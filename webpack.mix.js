@@ -13,6 +13,9 @@ const mix = require('laravel-mix');
 
 mix
   .js('resources/js/app.js', 'public/js')
+  .js('resources/js/bootstrap.js', 'public/js')
+  .js('resources/js/jquery-3.3.1.js', 'public/js')
+  .postCss('resources/css/bootstrap.css', 'public/css')
   .postCss('resources/css/app.css', 'public/css', [
     require('postcss-import'),
     require('tailwindcss'),

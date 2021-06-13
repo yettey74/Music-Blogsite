@@ -10,8 +10,7 @@
                 </h1>
             <a
                 href="/blog"
-                class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold txt-xl uppercase"           
-            >
+                class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold txt-xl uppercase no-underline hover:underline">
                 Read More
             </a>
             </div>
@@ -19,33 +18,55 @@
     </div>
 
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-    
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+        <div id="carouselExampleSlidesOnly" class="carousel carousel-dark carousel-fade" data-bs-touch="true" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+
+                <div class="carousel-item active data-bs-interval="20000"">
                     <img src="https://cdn.pixabay.com/photo/2018/06/30/09/29/music-3507317_960_720.jpg" class="d-block w-100" alt="monkey-music">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white text-3xl">First slide label</h5>
+                        <p class="text-white text-xl">Some representative placeholder content for the first slide.</p>
+                    </div> -->
                 </div>
-                <div class="carousel-item">
+
+                <div class="carousel-item data-bs-interval="10000">
                     <img src="https://cdn.pixabay.com/photo/2016/04/05/06/28/clef-1308793_960_720.jpg" class="d-block w-100" alt="guitar">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                        <h5 class="sm:text-s text-white text-3xl">First slide label</h5>
+                        <p class="sm:text-s text-white text-xl">Some representative placeholder content for the first slide.</p>
+                    </div> -->
                 </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button> -->
+
             </div>
+
+            
         </div>
+
 
         <div class="m-auto sm:m-auto text-left w-4/5 block">
             <h2 class="text-3xl font-extrabold text-gray-600">
                 Struggling to be a better Guitarist
             </h2>
-            <p class="py-8 text-gray-500 text-s">
+            <p class="font-extrabold py-8 text-gray-500 text-s">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam iste officia magnam, vel illo deleniti eveniet vitae tenetur aliquam quod? Similique temporibus consectetur quidem aperiam quisquam rerum consequuntur nostrum quos?
             </p>
             
-            <p class="font-extrabold text-gray-600 text-s pb-9">
+            <p class="text-gray-600 text- pb-9">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, minus voluptas quisquam sequi, libero blanditiis suscipit corrupti ab ipsum exercitationem cumque quia aliquid neque ea dolorum qui magnam eum. Explicabo.
             </p>
             <a
                 href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl"
-            >
+                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl no-underline hover:underline">
                 FIND OUT MORE
             </a>
         </div>
