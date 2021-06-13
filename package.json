@@ -10,9 +10,11 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@popperjs/core": "^2.9.2",
         "@tailwindcss/ui": "^0.3",
         "autoprefixer": "^9.6",
         "axios": "^0.21",
+        "bootstrap": "^5.0.0-beta3",
         "cross-env": "^7.0.3",
         "laravel-mix": "^6.0.19",
         "lodash": "^4.17.19",

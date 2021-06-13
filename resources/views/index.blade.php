@@ -10,7 +10,7 @@
                 </h1>
             <a
                 href="/blog"
-                class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold txt-xl uppercase"           
+                class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold txt-xl uppercase no-underline"           
             >
                 Read More
             </a>
@@ -19,34 +19,16 @@
     </div>
 
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-            </ol> 
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active' }}">
-                    <img class="d-block img-fluid" src="https://cdn.pixabay.com/photo/2016/04/05/06/28/clef-1308793_960_720.jpg" alt="Pic 1">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Pic Title 1</h3>
-                        <p>Pic Description 1</p>
-                    </div>
+
+        <div id="carouselExampleSlidesOnly" class="carousel carousel-dark slide carousel-fade" data-bs-touch="true" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://cdn.pixabay.com/photo/2016/04/05/06/28/clef-1308793_960_720.jpg" class="d-block w-100" width="600px" height="600px" alt="guitar" title="Guitar">
                 </div>
-                <div class="carousel-item ">
-                    <img class="d-block img-fluid" src="https://cdn.pixabay.com/photo/2018/06/30/09/29/music-3507317_960_720.jpg" alt="Pic 2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h3>Pic Title 2</h3>
-                        <p>Pic Description 2</p> 
-                    </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2018/06/30/09/29/music-3507317_960_720.jpg" class="d-block w-100" width="600px" height="600px" alt="monkey music" title="Monkey Music">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
 
         <div class="m-auto sm:m-auto text-left w-4/5 block">
@@ -62,7 +44,7 @@
             </p>
             <a
                 href="/blog"
-                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl"
+                class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl no-underline"
             >
                 FIND OUT MORE
             </a>
