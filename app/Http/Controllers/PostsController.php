@@ -45,16 +45,46 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        $newImageName = '';
+        $newAudioName = '';
+        $newVideoName = '';
+        $newYoutubeName = '';
+
         //dd($request);
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'image' => 'required|mimes:jpg,png,jpeg|max:5048'
+            'image_path' => 'nullable|mimes:jpeg,jpg,png,gif|max:5048', // 5MB
+            'audio' => 'nullable|file|mimes:audio/mpeg,mpga,mp3,wav,aac|max:32768', //32MB
+            'video' => 'nullable|file|mimes:mp4,avi|max:32768', // 32MB
         ]);
+        
+        if( $request->hasFile('image') )
+        {
+            $newImageName = uniqid() . '_' . $request->title . '.' . $request->image->extension();
+            //dd($newImageName);
+            $request->image->move(public_path('img'), $newImageName);
+        }
 
-        $newImageName = uniqid() . '_' . $request->title . '.' . $request->image->extension();
-        //dd($newImageName);
-        $request->image->move(public_path('img'), $newImageName);
+        if( $request->hasFile('audio') )
+        {
+            $newAudioName = uniqid() . '_' . $request->title . '.' . $request->audio->extension();
+            //dd($newAudioName);
+            $request->audio->move(public_path('audio'), $newAudioName);
+        }
+
+        if( $request->hasFile('video') )
+        {
+            $newVideoName = uniqid() . '_' . $request->title . '.' . $request->video->extension();
+            //dd($newVideoName);
+            $request->video->move(public_path('video'), $newVideoName);
+        }
+
+        if( $request->filled('youtube_path') )
+        {
+            $newYoutubeName = $request->youtube_path;
+            //dd($newYoutubeName);
+        }
 
         $slug = SlugService::createSlug(Posts::class, 'slug', $request->title);
 
@@ -64,6 +94,9 @@ class PostsController extends Controller
                 'description' => $request->input('description'),
                 'slug' => SlugService::createSlug(Posts::class, 'slug', $request->title),
                 'image_path' => $newImageName,
+                'audio_path' => $newAudioName,
+                'video_path' => $newVideoName,
+                'youtube_path' => $newYoutubeName,
                 'user_id' => auth()->user()->id
         ]);
         return redirect('/blog')
@@ -113,6 +146,10 @@ class PostsController extends Controller
                 'title' => $request->input('title'),
                 'description' => $request->input('description'),
                 'slug' => SlugService::createSlug(Posts::class, 'slug', $request->title),
+             /*    'image_path' => $request->input('image'),
+                'audio_path' => $request->input('audio'),
+                'video_path' => $request->input('video'),
+                'youtube_path' => $request->input('youtube_path'), */
                 'user_id' => auth()->user()->id
             ]);
 

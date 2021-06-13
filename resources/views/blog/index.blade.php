@@ -33,7 +33,31 @@
         <div>
 <!--<img src="https://cdn.pixabay.com/photo/2016/04/05/06/28/clef-1308793_960_720.jpg" width="700px" height="700px">
  -->     
-    <img src="{{ asset('img/' . $post->image_path) }}" alt="" title=""> 
+    @if ( $post->image_path != '')
+        <img src="{{ asset('img/' . $post->image_path) }}" alt="" title="">
+    @endif
+
+    @if ( $post->audio_path != '')
+        <audio controls>
+            <source src="{{ asset('audio/' . $post->audio_path) }}">
+            <!-- <source src="horse.mp3" type="audio/mpeg"> -->
+            Your browser does not support the audio element.
+        </audio>
+    @endif
+
+    @if ( $post->video_path != '')
+        <video width="640" height="640" controls>
+        <source src="{{ asset('video/' . $post->video_path) }}">
+       <!--  <source src="movie.ogg" type="video/ogg"> -->
+        Your browser does not support the video tag.
+        </video>
+    @endif
+
+    @if ( $post->youtube_path != '')
+        <iframe width="420" height="315"
+            src="{{ $post->youtube_path }}">
+        </iframe>
+    @endif
  </div>
 
         <div class="m-auto sm:m-auto text-left w-4/5 block">

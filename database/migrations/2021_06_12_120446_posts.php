@@ -20,8 +20,11 @@ class Posts extends Migration
                 $table->increments('id');
                 $table->string('slug');
                 $table->string('title');
-                $table->longtext('Decription');
+                $table->longtext('description');
                 $table->string('image_path');
+                $table->string('audio_path');
+                $table->string('video_path');
+                $table->string('youtube_path');
                 $table->timestamps();
                 $table->unsignedBigInteger('user_id');
                 $table->foreign('user_id')->references('id')->on('users');
@@ -36,6 +39,6 @@ class Posts extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('posts');
     }
 }
