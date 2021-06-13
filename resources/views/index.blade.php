@@ -9,10 +9,10 @@
                     Do you want to become a Guitarist?
                 </h1>
             <a
-                href="/blog"
+                href="/register"
                 class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold txt-xl uppercase no-underline"           
             >
-                Read More
+                Register Here
             </a>
             </div>
         </div>

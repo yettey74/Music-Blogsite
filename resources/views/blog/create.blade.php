@@ -2,13 +2,15 @@
 
 @section('content')
 
-    <div class="w-4/5 m-auto text-left">
-        <div class="py-15 border-b border-gray-200">
-            <h1 class="text-6xl">
-                Blog Posts
-            </h1>
-        </div>
+@if (Auth::check())
+    <div class="pt-15 w-4/5 m-auto">
+        <a 
+            href="/blog/create"
+            class="bg-blue-500 uppercase bg-transparent text-gray-100 text-xs font-extrabold px-5 py-3 rounded-3xl">
+            Create Post
+        </a>
     </div>
+@endif
 
     @if ( $errors->any() )
         <div class="w-4/5 m-auto">
