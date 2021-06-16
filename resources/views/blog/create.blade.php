@@ -30,8 +30,6 @@
             method="POST"
             enctype="multipart/form-data">
             @csrf
-
-            
             <div class="pt-5">
             <input 
                 type="text"

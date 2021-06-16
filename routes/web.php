@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,9 @@ use App\Http\Controllers\PostsController;
 
 Route::get('/', [PagesController::class, 'index']);
 Route::resource('/blog', PostsController::class );
+Route::resource('/contact', ContactController::class );
+//Route::post('/contact-form', '[ContactController::class, 'storeForm'])->name('contact.save');
+
 
 Auth::routes();
 

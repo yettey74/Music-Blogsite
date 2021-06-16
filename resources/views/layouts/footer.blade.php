@@ -11,67 +11,67 @@
                         Home
                     </a>
                 </li>
-                <li class="pb-1">
+               <!--  <li class="pb-1">
                     <a href="/blog">
                         Blog
                     </a>
-                </li>
+                </li> -->
                 <li class="pb-1">
                     <a href="/login">
                         Login
                     </a>
                 </li>
-                <li class="pb-1">
+                <!-- <li class="pb-1">
                     <a href="/register">
                         Register
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
 
         <div>
             <h3 class="text-l sm:font-bold text-grey-100">
-                Who is Us
+                Who am I
             </h3>
 
             <ul class="py-4 sm:text-s pt-4 text-grey-400">
                 <li class="pb-1">
                     <a href="/">
-                        What We Do
+                        What I Do
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/blog">
+                    <a href="/">
                         Location
                     </a>
                 </li>
-                <li class="pb-1">
-                    <a href="/login">
-                        Phone
-                    </a>
-                </li>
             </ul>
         </div>
 
         <div>
             <h3 class="text-l sm:font-bold text-grey-100">
-                Latest Posts
+                Services
             </h3>
 
             <ul class="py-4 sm:text-s pt-4 text-grey-400">
                 <li class="pb-1">
-                    <a href="/">
-                        Why we love Music
+                    <a href="/services">
+                        Vocals
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/blog">
-                        Why guitar is best
+                    <a href="/services">
+                        Guitar
                     </a>
                 </li>
                 <li class="pb-1">
-                    <a href="/login">
-                        Phone
+                    <a href="/services">
+                        Drums
+                    </a>
+                </li>
+                <li class="pb-1">
+                    <a href="/services">
+                        Theory
                     </a>
                 </li>
             </ul>

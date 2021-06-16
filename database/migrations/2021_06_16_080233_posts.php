@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class Posts extends Migration
 {
+    
     /**
      * Run the migrations.
      *
@@ -13,18 +14,16 @@ class Posts extends Migration
      */
     public function up()
     {
-        Schema::create(
-            'posts',
-            function( Blueprint $table )
+        Schema::create( 'posts', function( Blueprint $table )
             {
                 $table->increments('id');
                 $table->string('slug');
                 $table->string('title');
                 $table->longtext('description');
-                $table->string('image_path');
-                $table->string('audio_path');
-                $table->string('video_path');
-                $table->string('youtube_path');
+                $table->string('image');
+                $table->string('audio');
+                $table->string('video');
+                $table->string('youtube');
                 $table->timestamps();
                 $table->unsignedBigInteger('user_id');
                 $table->foreign('user_id')->references('id')->on('users');
