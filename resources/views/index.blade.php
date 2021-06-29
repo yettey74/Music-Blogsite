@@ -43,8 +43,7 @@
                 </div>
                 <div class="carousel-item">
                     <img src="../img/guitar.png" class="d-block w-100" width="600px" height="600px" alt="clef" title="clef">
-<!--                     <img src="https://cdn.pixabay.com/photo/2018/06/30/09/29/music-3507317_960_720.jpg" class="d-block w-100" width="600px" height="600px" alt="monkey music" title="Monkey Music">
- -->                </div>
+                </div>
             </div>
         </div>
 

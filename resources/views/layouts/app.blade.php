@@ -13,6 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.js') }}" defer></script>
     <script src="{{ asset('js/jquery-3.3.1.js') }}" defer></script>
+    <script src="{{ asset('js/jquery-fancybox.js') }}" defer></script>
     
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
